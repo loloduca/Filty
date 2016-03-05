@@ -1,1 +1,3 @@
-# Conference server
+# Sessions
+
+The Array of Categories.
