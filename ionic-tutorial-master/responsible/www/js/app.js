@@ -5,9 +5,11 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers', 'ngOpenFB'])
 
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, ngFB) {
+  ngFB.init({appId: '1700608010209350'});
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -80,19 +82,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   //   }
   // });
 
-  .state('app.session', {
-    url: "/sessions/:sessionId",
+  .state('app.single', {
+    url: '/playlists/:playlistId',
     views: {
-        'menuContent': {
-          templateUrl: "templates/session.html",
-          controller: 'SessionCtrl'
+      'menuContent': {
+        templateUrl: 'templates/playlist.html',
+        controller: 'PlaylistCtrl'
       }
-    };//kills current filiing under /app
-
-    // $stateProvider.state('app.whatever', {
-    //   url: '/w'
-    // })
-});
+    }
+  });
   // if none of the above states are matched, use this as the fallback
   // $urlRouterProvider.otherwise('/app/playlists');
   $urlRouterProvider.otherwise('/app/sessions');
