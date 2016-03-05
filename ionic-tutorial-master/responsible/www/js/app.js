@@ -8,8 +8,10 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 angular.module('starter', ['ionic', 'starter.controllers', 'ngOpenFB'])
 
 
+
 .run(function($ionicPlatform, ngFB) {
   ngFB.init({appId: '1700608010209350'});
+
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -90,7 +92,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngOpenFB'])
         controller: 'PlaylistCtrl'
       }
     }
+<<<<<<< HEAD
   });
+=======
+});
+>>>>>>> fd74d18c3b09558a2fb84980dafc6423d8d46f86
   // if none of the above states are matched, use this as the fallback
   // $urlRouterProvider.otherwise('/app/playlists');
   $urlRouterProvider.otherwise('/app/sessions');

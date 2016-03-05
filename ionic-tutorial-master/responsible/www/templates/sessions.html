@@ -1,22 +1,23 @@
 <ion-view view-title="Sessions">
   <ion-content>
     <ion-list>
-            <label class="toggle">
-              <p>{{session.time}}</p>
-           <input type="checkbox">
-           <div class="track">
-             <div class="handle"></div>
-           </div>
-        </label>
+      <label class="toggle">
+        <p>{{session.time}}</p>
+        <input type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
 
-        <div class="list">
-
+      //The list of Categories
+      <div class="list">
         <a class="item item-thumbnail-left" href="#">
-          <img src="cover.jpg">
+          <img src="../img/Family.png">
           <ion-item ng-repeat="session in sessions" href="#/app/sessions/{{session.id}}">
-          <h2>{{session.title}}</h2>
-          <p>{{session.time}}</p>
+            <h2>{{session.title}}</h2>
+            <p>{{session.time}}</p>
         </a>
+      </div>
 
       </ion-item>
     </ion-list>
