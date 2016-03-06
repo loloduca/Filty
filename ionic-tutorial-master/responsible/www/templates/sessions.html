@@ -8,9 +8,11 @@
 
         <a class="item item-avatar" href="#"></a>
           <ion-item ng-repeat="session in sessions" href="#/app/sessions/{{session.id}}">
-          <ui-sref="app.listy"><img src="../img/cover.jpg">
+          <img src="../img/cover.jpg">
           <p></b> <h2>{{session.title}}</h2></p>
             <p></b>{{session.time}}</p>
+            <ui-sref="app.listy"><button clear item-right>Edit List</button>
+
           </ion-item>
         </a>
 
