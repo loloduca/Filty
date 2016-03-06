@@ -1,32 +1,30 @@
 <ion-view view-title="Filty App">
   <ion-content>
+
+    <!--The list of categories / filters-->
     <ion-list>
-      <div class="list">
+      <h1 style="text-align: center">Your Filters</h1>
+      <div style="margin-bottom: 40px" class="list">
+        <div class="list">
 
-
-      <div class="list">
-
-        <a class="item item-avatar" href="#"></a>
           <ion-item ng-repeat="session in sessions" href="#/app/sessions/{{session.id}}">
-          <img src="../img/cover.jpg">
-          <p></b> <h2>{{session.title}}</h2></p>
-            <p></b>{{session.time}}</p>
-            <ui-sref="app.listy"><button clear item-right>Edit List</button>
-
+            <img src="../img/cover.jpg">
+            <h2>{{session.title}}</h2>
+            <p>{{session.time}}</p>
+            <button>Edit List</button>
           </ion-item>
-        </a>
 
+        </div>
       </div>
 
-      </div>
-
-      <div class="bar bar-footer bar-balanced">
-        <div class="title">Mute Alarm</div>
-        <button class="button button-full button-clear">
-        </button></div>
-      </div>
-
-      </ion-item>
     </ion-list>
+
+    <!--Mute Notifications-->
+    <div class="bar bar-footer bar-balanced">
+      <div class="title">Mute Notifications</div>
+      <button class="button button-full button-clear">
+      </button>
+    </div>
+
   </ion-content>
 </ion-view>
