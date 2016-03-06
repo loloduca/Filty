@@ -51,11 +51,9 @@ angular.module('starter.controllers', ['starter.services', 'ngOpenFB'])
                 alert('Facebook login failed');
             }
         });
-<<<<<<< HEAD
-};
-=======
+
   };
->>>>>>> 047791c6362e6383f346d7592ea6add8362f1e6d
+
 })
 
 // .controller('PlaylistsCtrl', function($scope) {
