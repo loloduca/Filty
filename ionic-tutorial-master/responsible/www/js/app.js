@@ -13,8 +13,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngOpenFB'])
 
 
 .run(function($ionicPlatform, ngFB) {
-  ngFB.init({appId: '1700608010209350'});
-
+  //ADD ITEM
+    ngFB.init({appId: '1700608010209350'});
+  //ADD ITEM
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -77,8 +78,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngOpenFB'])
       }
     })
 
-
-
+//DO NOT REMOVE!!!!!!!
+  .state('app.session', {
+    url: '/sessions/:sessionId',
+    views: {
+        'menuContent': {
+          templateUrl: "templates/session.html",
+          controller: 'SessionCtrl'
+      }
+    }
+});
 
   // if none of the above states are matched, use this as the fallback
   // $urlRouterProvider.otherwise('/app/playlists');
