@@ -4,13 +4,17 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
+
 // angular.module('starter', ['ionic', 'starter.controllers'])
 angular.module('starter', ['ionic', 'starter.controllers', 'ngOpenFB'])
 
+
+
+
+
 .run(function($ionicPlatform, ngFB) {
-  //ADD ITEM
-    ngFB.init({appId: '1700608010209350'});
-  //ADD ITEM
+  ngFB.init({appId: '1700608010209350'});
+
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -74,24 +78,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngOpenFB'])
     })
 
 
-  .state('app.session', {
-    url: '/sessions/:sessionId',
-    views: {
-        'menuContent': {
-          templateUrl: "templates/session.html",
-          controller: 'SessionCtrl'
-      }
-    }
-})
 
-  .state('app.listy', {
-    url: "/listy",
-    views: {
-        'menuContent': {
-          templateUrl: "templates/filtyListy.html"
-      }
-    }
-  });
 
   // if none of the above states are matched, use this as the fallback
   // $urlRouterProvider.otherwise('/app/playlists');
