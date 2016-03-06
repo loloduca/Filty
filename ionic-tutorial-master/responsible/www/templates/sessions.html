@@ -1,26 +1,27 @@
-<ion-view view-title="Sessions">
+<ion-view view-title="Filty App">
   <ion-content>
     <ion-list>
       <div class="list">
 
-        <ion-item ng-repeat="session in sessions" href="#/app/sessions/{{session.id}}">
-      <a class="item item-avatar" href="#">
-        <img src="../img/cover.png">
-        <h2>{{session.title}}</h2>
-        <p>{{session.time}}</p>
-      </a>
 
-
-      //The list of Categories
       <div class="list">
-        <a class="item item-thumbnail-left" href="#">
-          <a ui-sref="app.listy"><img src="../img/Family.png"></a>
+
+        <a class="item item-avatar" href="#"></a>
           <ion-item ng-repeat="session in sessions" href="#/app/sessions/{{session.id}}">
-            <h2>{{session.title}}</h2>
-            <p>{{session.time}}</p>
+          <ui-sref="app.listy"><img src="../img/cover.jpg">
+          <p></b> <h2>{{session.title}}</h2></p>
+            <p></b>{{session.time}}</p>
           </ion-item>
         </a>
 
+      </div>
+
+      </div>
+
+      <div class="bar bar-footer bar-balanced">
+        <div class="title">Mute Alarm</div>
+        <button class="button button-full button-clear">
+        </button></div>
       </div>
 
       </ion-item>
