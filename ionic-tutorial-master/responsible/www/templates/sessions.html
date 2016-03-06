@@ -12,10 +12,11 @@
       //The list of Categories
       <div class="list">
         <a class="item item-thumbnail-left" href="#">
-          <img src="../img/Family.png">
+          <a ui-sref="app.listy"><img src="../img/Family.png"></a>
           <ion-item ng-repeat="session in sessions" href="#/app/sessions/{{session.id}}">
             <h2>{{session.title}}</h2>
             <p>{{session.time}}</p>
+          </ion-item>
         </a>
       </div>
 
