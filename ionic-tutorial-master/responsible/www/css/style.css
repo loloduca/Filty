@@ -1,5 +1,12 @@
 /* Empty. Add your own CSS if you like */
 #logo {
-
   max-width: 400px;
+}
+
+#facebook-avatar {
+
+}
+
+#facebook-picture {
+  max-width: 100%;
 }
